@@ -1,3 +1,3 @@
-# Ievads-Web-Izstr-d--skol-niem
+# Ievads-Web-Izstrādē-skolēniem
 Materiāli priekš kontroldarba.
 
