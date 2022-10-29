@@ -1,0 +1,38 @@
+/*šajā piemērā tiks nomainīta krāsa visiem p taga elementiem
+  Norādot tagu iespējams nomainīt stila elementus visiem norādīta taga elementiem.
+*/
+p {
+    color: MediumSeaGreen;
+    padding: 1em;
+}
+
+/*Šajā piemērā tiks nomainīts stils visiem html elementiem, kuriem ir klase galvenais_virsraksts - class="galvenais_virsraksts"
+  Klases elementi ir spēcīgāki par tagiem, tādēļ ja kādā no p tagiem būs būs klase galvenais_virsraksts, tiks pielietots klases stils.
+  Lai referencētu klasi CSS failā, pirms klases nosaukuma jāizmanto . simbols
+*/
+.galvenais_virsraksts {
+    color: #ff6347;
+    text-align: center;
+    margin: 5%;
+}
+
+/*Ar # simbolu tiek referencēti attiecīgie html elemnti, kuriem ir attiecīgais id. 
+  Šajā piemērā stils tiks piemērots visiem html elementie, kuriem id="unikals_paragrafs"
+  Id ir visspēcīgākais stila selektors, tādēļ tas pārrakstīs gan taga, gan klases stilus. 
+*/
+#unikals_paragrafs {
+    color: SlateBlue    ;
+}
+
+/*Pievieno apmales tabulai un tās elementiem.*/
+table, th, td {
+    border: 1px solid black;
+}
+
+.margin_padding_border {
+    text-align: center;
+    border: 3px solid black;
+    padding: 3%;
+    margin: 3%;
+
+}

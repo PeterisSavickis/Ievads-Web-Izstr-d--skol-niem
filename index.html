@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!---->
+<html>
+    <head>
+        <!--Head tagā tiek glabāti visi lapas metadati (dati par lapu)-->
+        <meta charset="UTF-8"> <!--Charset norāda kādu burtu kodēšanas sistēmu mēs izmantojam. Mūsdienās tiek izmantots UTF-8-->
+        <meta name="description" content="HTMl programmēšanas pamati"> <!--Lapas apraksts-->
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--atslēgvārdus izmanto, lai lapu varētu atrast kādā no meklēsanas sistēmām, piemēram, Google-->
+        <meta name="author" content="Pēteris Savickis"> <!--Lapas autors-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Lapu ierīcē parāda 1:1 attiecībā. Nepieciešamas izmantot, ja izmanto CSS-->
+        <!--meta tagi nav obligāti, lai izveidotu lapu, bet ļoti ieteicami, jo tā ir daļa no labās prakses programmēšanā-->
+
+        <title>HTML Virsraksts</title>
+        <!--Lapas nosaukums. Parādīsies Kā lapas virsraksts pārlūkprogrammā. -->
+
+        <link rel="stylesheet" href="style.css">
+        <!--link tags tiek izmantots lai izveido savienojumu starp CSS un HTNL failu. href daļā norāda css fail relatīvo vai absolūto novietojumu projektā.-->
+        <!--IR SVARĪGI NORĀDĪT PAREIZU href ATRIBUTU, LAI IZVEIDOTU SAVIENOJUMU STARP ABIEM FAILIEM!-->
+
+        <script src="script.js"></script>
+        <!--Tiek izveidots savienojums starp JavaScript un HTML failu. src sadaļā tiek norādīts skripta absolūtais vai relatīvais ceļš-->
+        <!--IR SVARĪGI NORĀDĪT PAREIZU src ATRIBUTU, LAI IZVEIDOTU SAVIENOJUMU STARP ABIEM FAILIEM!-->
+    </head>
+
+    <body>
+        <!--h tags ir saīsinājums no vārda header. Latviski tulkojas kā virsraksts.-->
+        <!--Katrs nākamais skaitlis pie h taga padara to mazāk nozīmīgu. Izmērs paliek mazāks-->
+        <header>
+            <h1 class="galvenais_virsraksts">Šis ir Virsraksts!</h1>
+        </header>
+        <!--Header tags tiek izmantots, lai nošķirtu virsrakstus no pārējās lapas. Šāda virsraksta atdalīšana atvieglo lapas stilizēšanu, jo tiek izmantots specifisks tags.-->
+        <h2>Šis arī ir virsraksts, bet mazāks.</h2>
+        <h3>Katrs nākamais skaitlis pie h taga padara virsrakstu mazāku.</h3>
+        <br/>
+        <!--br tags saīsinājums no vārda break, jeb pārlauzt. Daži tagi parādās vienā līnijā, br tags ļauj tos attēlot nākošajā rindiņā-->
+        <p class="parasts_teksts">Šis ir paragrāfs ar tekstu.</p>
+        <p class="parasts_teksts" id="unikals_paragrafs">Šis arī ir parasts paragrāfs</p>
+        <!--p tags, saīsinājums no vārda paragraph, jeb latviki paragrāfs. Izmanto priekš aprakstošā teksta.-->
+
+        <img src="https://www.w3schools.com/images/lamp.jpg" alt="Picture of a light bulb">
+        <!--img tagu izmanto attēlu ievietošanai. Saīsinājums no vārda image, jeb latviski attēls. src atribūtā ir jānorāda attēla attēla absolūtais (web adrese) vai relatīvais ceļš (ja attēls ir saglabāts turpat, kur html lapa)-->
+        <!--alt tags tiek izmantos ja radusies kļūda attēla ielādes brīdī. Šajā gadījumā, ja attēls netiktu ielādātes, tā vietā tiktu parādīts alt taga teksts-->
+        <a href="https://www.google.lv" target="_blank">“If you have to ask, you'll never know. If you know, you need only ask.”</a>
+        <!--a tags, jeb anhor tags. Tiek izmantots, lai izveidotu hipersaiti uz citu lapu.-->
+        <!--target atribūts tiek izmantots, lai specificētu saites atvēršanas veidu. _blank nozīmē ka saite tiks atvērta jaunā lapā.-->
+
+        <br/>
+        <br/>
+        <br/>
+
+        <table id="tabula">
+        <!--table tags tiek izmantots, lai veidotu tabulas-->
+            <tr>
+            <!--tr tags ir saīsinājums no table row, jeb tabulas rinda. Ar šo tagu apzīmējam, ka vēlamies izveidot vai modificēt konkrēto rindu.-->
+              <th>Vārds</th>
+              <!--th tags ir saīsinājums no table header, jeb tabulas virsraksts. Parasti šī ir tabulas pirmā rinda, kurā ir attēloti tabulas kolonnas nosaukumi.-->
+              <th>Uzvārds</th>
+            </tr>
+            <tr>
+              <td>Fricis</td>
+              <!--td tags ir saīsinājums no table data, jeb tabulas dati. Šis tags tiek izmantots, lai attētu tabulas datus konkrētā rindā.-->
+              <td>Ūsa</td>
+            </tr>
+        </table>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <button type="button" id="unique_button" onclick="alertFunction()">Piepied mani!</button>
+        <!--Button tags tiek izmantots, lai izveidotu lapā pogu. Lai poga veiktu kādas darbības vai izpildītu loģiku, nepieciešams izveidot JavaSript skriptu.-->
+        <!--atribūts onclick tiek izmantots lai pievienotu loģiku, kad poga ir nospiesta. Šajā gadījuma mēs atsaucamies uz funkciju, kas atrodas JavaScript failā.-->
+
+        <br/>
+        <br/>
+        <br/>
+
+        <form>
+            <label for="vards">Vārds</label>
+            <input type="text" name="vards" id="vards">
+            
+            <label for="uzvards">Uzvārds</label>
+            <input type="text" name="uzvards" id="uzvards">
+
+            <br/>
+            <br/>
+
+            <button type="button" onclick="submitForm()">Iesniegt</button>
+        </form>
+        
+        <div class="margin_padding_border">
+            <p>Ziniet atškīrību starp margin, padding un border.</p>
+        </div>
+        <!--div tagu var uztvert kā atsevišķu divīziju jūsu saturam. Tā ir kā tukša kaste, kur var ielikt jums vajadzīgās lietas.-->
+        <!--Tiek uztverts kā bloka elements.-->
+
+    </body>
+</html>
